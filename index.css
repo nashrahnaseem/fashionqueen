@@ -1,0 +1,75 @@
+.container{
+    height: 25rem;
+    position: relative;
+
+    /* background-image: url("mamiimages/backimg.jpg");  */
+}
+.container::before{
+    content:"";
+    position: absolute;
+    background:url('mamiimages/backimg.jpg') no-repeat center center/cover ;
+    height: 50rem;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 5rem;
+    color:#f90576;
+    text-shadow:2px 2px #1d1c1c;
+}
+#heading2{
+          font-size: 2rem;
+}
+#heading{
+    font-size:3rem ;
+}
+#para{
+    font-size: 1.7rem;
+}
+
+   
+.navbar{
+          display: flex;
+          background-color: rgb(255 186 186 / 38%);
+          /* border-radius: 10rem; */
+          position: relative;
+}
+
+.nav{
+    display: flex;
+    list-style: none;
+}
+
+
+.item{
+    margin: 2px 2px;
+    padding: 5px 15px;
+    border-radius: 1em;
+    /* font-weight: bo; */
+    font-size: 1.3rem;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.item:hover{
+    background-color: white;
+}
+.navbar img{
+    height: 4rem;
+    width: 10rem;
+    padding: 2px 2px;
+    border-radius: 10rem;
+}
+.container2{
+    border: 2px solid brown;
+    margin-top: 24rem;
+    height: 50rem;
+    background: url('mamiimages/offer.png')   no-repeat center center/cover ;
+}
