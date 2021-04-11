@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stiching</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        .container{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .nav{
+               display: inline-block;
+    background-color: #f4433626;
+    font-style: italic;
+    border-radius: 1rem 1rem;
+    color: #3e4e5ded;
+
+    }
+          .container1{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(9rem,1fr));
+            /* background-color:#f9f0f6; */
+            background-color: #e6417a40;
+            border-radius: 1rem 1rem;
+
+        }
+        .items{
+            height: 7rem;
+            width: 7rem;
+            margin: 1rem 1rem;
+            padding: 1rem 1rem;
+            font-size: 1.3rem;
+            box-shadow: 0.2rem 0.2rem 0.2rem #e91e6385;
+            display: flex;
+            align-items: center;
+            font-style: italic;
+            flex-wrap: wrap;
+            font-weight: 400;
+            color: #262829cf;
+            
+        }
+        .price{
+            font-size: 1rem;
+            font-style: normal;
+            color: #262829cf;
+        
+        }
+        #items1{
+            background-color: #f123493b;
+    border-radius: 2rem 2rem;
+        }
+        #items2{
+       background-color: #f5113b61;;
+    border-radius: 2rem 2rem;
+        }
+        #items3{
+            background-color: #92394945;
+    border-radius: 2rem 2rem;
+        }
+        #items4{
+       background-color: #e648e83b;
+    border-radius: 2rem 2rem;
+        }
+        #items5{
+       background-color: #af50613b;
+    border-radius: 2rem 2rem;
+        }
+        #items6{
+       background-color: #f165233b;
+    border-radius: 2rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+        Stiching
+        </div>
+    </div>
+    <div class="container1">
+        <div class="items" id="items1">single line kurtis
+            <div class="price">
+                Cost:Rs100
+            </div> 
+        </div>
+        <div class="items" id="items2">double line kurtis
+            <div class="price">
+                Cost:Rs200
+            </div>
+        </div>
+        <div class="items" id="items3">trouser ,pant ,etc
+            <div class="price">
+                Cost:Rs150
+            </div>
+        </div>
+        <div class="items" id="items4">blouse
+            <div class="price">
+                Cost:Rs200
+            </div>
+        </div>
+        <div class="items" id="items5">altering
+            <div class="price">
+                Cost:Rs100
+            </div>
+        </div>
+        <div class="items" id="items6">complete suit
+            <div class="price">
+                Cost:Rs300
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nav">
+            <h4>For urgent (within 2days)extra charges is required Rs50</h4>
+        </div>
+        
+    </div>
+    <div >
+        <h2>Contact us 9232343441</h2>
+    </div>
+
+</body>
+</html>

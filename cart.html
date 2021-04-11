@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container{
+        display: grid;
+              grid-gap: 1px;
+              background-color:#f9f0f6;
+              /* grid-template-columns: 1fr 1fr 1fr 1fr ; */
+              grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+
+       }
+       .img{
+           height: 20rem;
+            width: 17rem;
+            margin: 1rem 1rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20rem 20rem;
+       }
+    </style>
+</head>
+<body>
+    <div class="contaner">
+        <div id="demo">
+ 
+        </div>
+    </div>
+    
+    <script>
+        cartProducts=[]
+     alreadyExisting = localStorage.getItem("mycart");
+     if(alreadyExisting){//if anything in cart
+      cartProducts = JSON.parse(alreadyExisting)   
+  }
+  cartProducts.map(p=>{
+      
+    document.getElementById("demo").innerHTML+=`<img class="img" src="mamiimages/${p}" /><button onclick="removeFromCart('${p}')" >remove from cart</button>`
+})
+function removeFromCart(productId){
+  cartProducts=[]
+  alreadyExisting = localStorage.getItem("mycart");
+  if(alreadyExisting){//if anything in cart
+    cartProducts = JSON.parse(alreadyExisting)   
+  }
+cartProducts = cartProducts.filter(p=> p !== productId)
+localStorage.setItem("mycart",JSON.stringify(cartProducts) );
+// displayProducts()// update the screen
+}
+    </script>
+</body>
+</html>

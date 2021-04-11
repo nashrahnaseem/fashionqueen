@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casual wearings</title>
+    <script src="admin.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body{
             background-color:#e8f4f9;
@@ -42,81 +44,82 @@
         .item{
             height: 20rem;
             width: 17rem;
-            margin: 1.8rem .5rem;
+            margin: 2rem .5rem;
+            
         }
         #dress1{
             background: url(mamiimages/save1.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress2{
             background: url(mamiimages/save2.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress3{
             background: url(mamiimages/save3.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress4{
             background: url(mamiimages/save4.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress5{
             background: url(mamiimages/save5.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress6{
             background: url(mamiimages/save6.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress7{
             background: url(mamiimages/save7.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress8{
             background: url(mamiimages/save8.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress9{
             background: url(mamiimages/save9.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress10{
             background: url(mamiimages/save10.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress11{
             background: url(mamiimages/save11.jpeg);
-            
+
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
@@ -126,25 +129,25 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress13{
             background: url(mamiimages/save13.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress14{
             background: url(mamiimages/save14.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress15{
             background: url(mamiimages/save15.jpeg);
-            
+
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
@@ -154,14 +157,14 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress17{
             background: url(mamiimages/save17.jpeg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20rem 20rem;
-            
+
         }
         #dress18{
             background: url(mamiimages/save18.jpeg);
@@ -189,108 +192,206 @@
             font-size: 1.2rem;
             border-radius: .5rem;
             font-family: 'Courier New', Courier, monospace;
-            
+
         }
         .item .price a{
             text-decoration: none;
             color: black;
             font-family: cursive;
         }
+        .bag1{
+
+    position: fixed;
+    right: 1rem;
+    top: 3rem;
+    color: #dc2746b5;
+    border-radius: 1.4rem;
+            
+        }
+        .bag1:hover{
+            color: rgb(221, 57, 134);
+        }
+        .material-icons{
+       font-size: 3rem; box-shadow: 0 5px 5px rgb(218, 86, 108);
+       border-radius: 2rem 2rem;
+   }
+   #bag{
+    position: fixed;
+    right: 1rem;
+    top: 2.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 2rem;
+    color: white;
+    cursor: pointer;
+    background-color:#dc218194;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   }
+   .hoverme{
+    background-color: #d2b5db8c;
+    color: #6d0e0e;
+    position: fixed;
+    right: 1rem;
+    top: 5rem;
+    visibility: hidden;
+    border-radius: 1rem;
+    padding: .5rem .5rem;
+   }
+ .bag1:hover .hoverme
+    {
+       visibility: visible;
+       
+    }
+    button{
+        cursor: pointer;
+        background-color:#d0c3c754;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        margin: 0rem .5rem;
+        border-radius: .5rem .5rem;
+    }
 
     </style>
 </head>
 <body>
     <div class="navbar">
         Casual Wears
+       
     </div>
+    <div id="bag">
+            
+    </div>
+   <a href="cart.html">
+    <div class="bag1">
+        <div class="hoverme">items in cart</div>
+        <i class="material-icons">
+            add_shopping_cart                
+        </i>
+    </div>
+   </a>
     <div class="container">
-        
+
         <div class="item" id="dress1"><div class="price">
-            Rs:649<br>
+            Rs:649 <button onclick="addToCart('save1.jpeg')">add to cart</button><button onclick="removeFromCart('save1.jpeg')">remove</button><br>
             <a href="mamiimages/save1.jpeg">see the full image</a> 
         </div>
     </div>
         <div class="item" id="dress2">
             <div class="price">
-                Rs:762<br>
+                Rs:762<button onclick="addToCart('save2.jpeg')">add to cart</button><button onclick="removeFromCart('save2.jpeg')">remove</button><br>
                 <a href="mamiimages/save2.jpeg">see the full image</a> 
             </div>
         </div>
         <div class="item" id="dress3">
             <div class="price">
-                Rs:756<br>
+                Rs:756<button onclick="addToCart('save3.jpeg')">add to cart</button><button onclick="removeFromCart('save3.jpeg')">remove</button><br>
                 <a href="mamiimages/save3.jpeg">see the full image</a> 
             </div>
         </div>
         <div class="item" id="dress4"><div class="price">
-            Rs:528<br>
+            Rs:528<button onclick="addToCart('save4.jpeg')">add to cart</button><button onclick="removeFromCart('save4.jpeg')">remove</button><br>
             <a href="mamiimages/save4.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress5"><div class="price">
-            Rs:649<br>
+            Rs:649<button onclick="addToCart('save5.jpeg')">add to cart</button><button onclick="removeFromCart('save5.jpeg')">remove</button><br>
             <a href="mamiimages/save5.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress6"><div class="price">
-            Rs:222<br>
+            Rs:222<button onclick="addToCart('save6.jpeg')">add to cart</button><button onclick="removeFromCart('save6.jpeg')">remove</button><br>
             <a href="mamiimages/save6.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress7"><div class="price">
-            Rs:755<br>
+            Rs:755<button onclick="addToCart('save7.jpeg')">add to cart</button><button onclick="removeFromCart('save7.jpeg')">remove</button><br>
             <a href="mamiimages/save7.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress8"><div class="price">
-            Rs:751<br>
+            Rs:751<button onclick="addToCart('save8.jpeg')">add to cart</button><button onclick="removeFromCart('save8.jpeg')">remove</button><br>
             <a href="mamiimages/save8.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress9"><div class="price">
-            Rs:785<br>
+            Rs:785<button onclick="addToCart('save9.jpeg')">add to cart</button><button onclick="removeFromCart('save9.jpeg')">remove</button><br>
             <a href="mamiimages/save9.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress10"><div class="price">
-            Rs:764<br>
+            Rs:764<button onclick="addToCart('save10.jpeg')">add to cart</button><button onclick="removeFromCart('save10.jpeg')">remove</button><br>
             <a href="mamiimages/save10.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress11"><div class="price">
-            Rs:734<br>
+            Rs:734<button onclick="addToCart('save11.jpeg')">add to cart</button><button onclick="removeFromCart('save11.jpeg')">remove</button><br>
             <a href="mamiimages/save11.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress12"><div class="price">
-            Rs:714<br>
+            Rs:714<button onclick="addToCart('save12.jpeg')">add to cart</button><button onclick="removeFromCart('save12.jpeg')">remove</button><br>
             <a href="mamiimages/save12.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress13"><div class="price">
-            Rs:753<br>
+            Rs:753<button onclick="addToCart('save13.jpeg')">add to cart</button><button onclick="removeFromCart('save13.jpeg')">remove</button><br>
             <a href="mamiimages/save13.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress14"><div class="price">
-            Rs:502<br>
+            Rs:502<button onclick="addToCart('save14.jpeg')">add to cart</button><button onclick="removeFromCart('save14.jpeg')">remove</button><br>
             <a href="mamiimages/save14.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress15"><div class="price">
-            Rs:555<br>
+            Rs:555<button onclick="addToCart('save15.jpeg')">add to cart</button><button onclick="removeFromCart('save15.jpeg')">remove</button><br>
             <a href="mamiimages/save15.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress20"><div class="price">
-            Rs:731<br>
+            Rs:731<button onclick="addToCart('save16.jpeg')">add to cart</button><button onclick="removeFromCart('save16.jpeg')">remove</button><br>
             <a href="mamiimages/save20.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress17"><div class="price">
-            Rs:207<br>
+            Rs:207<button onclick="addToCart('save17.jpeg')">add to cart</button><button onclick="removeFromCart('save17.jpeg')">remove</button><br>
             <a href="mamiimages/save17.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress18"><div class="price">
-            Rs:749<br>
+            Rs:749<button onclick="addToCart('save18.jpeg')">add to cart</button><button onclick="removeFromCart('save18.jpeg')">remove</button><br>
             <a href="mamiimages/save18.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress19"><div class="price">
-            Rs:754<br>
+            Rs:754<button onclick="addToCart('save19.jpeg')">add to cart</button><button onclick="removeFromCart('save19.jpeg')">remove</button><br>
             <a href="mamiimages/save19.jpeg">see the full image</a> 
         </div></div>
         <div class="item" id="dress20"><div class="price">
-            Rs:800<br>
+            Rs:800<button onclick="addToCart('save20.jpeg')">add to cart</button><button onclick="removeFromCart('save20.jpeg')">remove</button><br>
             <a href="mamiimages/save20.jpeg">see the full image</a> 
         </div></div>
-        
+    
     </div>
+    <script>
+        var count=0;
+       var bag= document.getElementById("bag");
+        function addToCart(productId){
+cartProducts=[]
+  alreadyExisting = localStorage.getItem("mycart");
+  if(alreadyExisting){//if anything in cart
+    cartProducts = JSON.parse(alreadyExisting)   
+  }
+  
+  cartProducts.push(productId)
+  bag.innerHTML=++count;
+  localStorage.setItem("mycart",JSON.stringify(cartProducts) );
+  bag.innerHTML=JSON.parse(localStorage.getItem("mycart")).length
+// displayProducts()// update the screen
+}
+
+function removeFromCart(productId){
+  cartProducts=[]
+  alreadyExisting = localStorage.getItem("mycart");
+  if(alreadyExisting){//if anything in cart
+    cartProducts = JSON.parse(alreadyExisting)   
+  }
+cartProducts = cartProducts.filter(p=> p !== productId)
+localStorage.setItem("mycart",JSON.stringify(cartProducts) );
+ bag.innerHTML=cartProducts.length 
+
+// displayProducts()// update the screen
+}
+bag.innerHTML=JSON.parse(localStorage.getItem("mycart")).length
+    </script>
 </body>
-</html>
+</html> 
