@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+       body{
+           background-color: #e288887d;
+           text-align: center
+       }
+        #messages1{
+         align-items: center;
+    }
+    li{
+        list-style: none;   
+    }
+    #bag{
+        position: fixed;
+        right: 0rem;
+    top: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #dc218194;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .container1{
+        display: inline-block;
+        width: auto;
+    margin: 2rem 2rem;
+    padding: 1rem 1rem;
+    background-color: #e4286873;
+    font-size: 1.9rem;
+    border-radius: 1rem 1rem;
+
+    }
+    .hoverme{
+    background-color: #d2b5db8c;
+    color: #6d0e0e;
+    position: fixed;
+    right: 1rem;
+    top: 5rem;
+    /* visibility: hidden; */
+    border-radius: 1rem;
+    padding: .5rem .5rem;
+   }
+ #bag:hover .hoverme
+    {
+       visibility: visible;
+       
+    }
+    
+    
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+ 
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+ <script src="admin.js"></script>
+</head>
+<body>
+    <h1>Your booking status
+         </h1>
+         <div id="bag">
+            
+        </div>  
+        <div class="hoverme">total bookings</div>
+    <div class="container"  id="messages1">
+       
+    </div>
+    <div  id="messages2">
+
+    </div>  
+</body>
+</html>
