@@ -1,9 +1,12 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Fashion Queen</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cart.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,16 +31,26 @@
         <li class="item"><a href="offers.html">Offers</a></li>
         <li class="item"><a href="about.html">About us</a></li>
         <li class="item"><a href="contactus.html">Contact us</a> </li>
-        
+          <li><a href="adminlogin.html"><span class="glyphicon glyphicon-user"></span> Admin login</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+          
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="adminpage.html"><span class="glyphicon glyphicon-user"></span> Admin login</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+     
     </div>
-  </div>
-</nav>
   
+</nav>
+</div> <div id="bag" style="    background-color: #ce3081fa; height: 1.5rem; width: 1.5rem; border-radius: 2rem; margin-top: -2.5rem; margin-right: -.5rem;" >
+            
+</div>
+<a href="cart.html">
+<div class="bag1" >
+    <div class="hoverme">items in cart</div>
+    <i class="material-icons" style="background: #f7ececfa; font-size:4rem !important; margin-top: -2.5rem; color: #cc4141cf;    box-shadow: 0 5px 5px rgb(183 37 61 / 66%);">
+        add_shopping_cart                
+    </i>
+</div>
+</a>
 <div class="content container2">
     <h1 id="heading">
         Welcome To The Fashion World
@@ -48,7 +61,7 @@
     </p>
 </div>
 </div>
-
+<script src="cart.js"></script>
 </body>
 </html>
 

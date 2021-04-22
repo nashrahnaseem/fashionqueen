@@ -1,0 +1,65 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+    <form>
+        <input type="text " type="submit" id="message" placeholder="eneter the message" autocomplete="off">
+        <input type="text " type="submit" id="message1" placeholder="daceneter the message" autocomplete="off">
+        <input type="button" value="send" onClick ="sendMessage()">
+    </form> 
+    <ul id="messages"></ul>
+ </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first --> 
+ <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+ 
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+ <script>
+   // Your web app's Firebase configuration
+   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+   var firebaseConfig = {
+     apiKey: "AIzaSyDHlZkKXqKdG0ozDEpf7TIndecn5Jwy_c0",
+     authDomain: "myproject-614de.firebaseapp.com",
+     projectId: "myproject-614de",
+     storageBucket: "myproject-614de.appspot.com",
+     messagingSenderId: "692277333111",
+     appId: "1:692277333111:web:19e02efae02f77cec98a72",
+     measurementId: "G-MVC17KVT6X"
+   };
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+   firebase.analytics();
+   var myname = prompt("enter your name");
+   function sendMessage(){
+     console.log(1)
+       var message =document.getElementById("message").value;
+       var message1 =document.getElementById("message1").value;
+       firebase.database().ref("messages").push().set({
+           "sender":myname,
+           "message":message,
+           "message1":message1,
+           
+       });
+      
+      
+   }
+   firebase.database().ref("messages").on("child_added",function(snaphot){
+             var html="";
+             html+="<li>";
+              html+=snaphot.val().sender + ":"+ snaphot.val().message ;
+              html+= "addres"+":"+ snaphot.val().message1;
+              html+="</li>"
+        document.getElementById("messages").innerHTML+=html;
+        
+   });
+
+ </script>
+ </html> 
+ 

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body{
+            background-color:#e8f4f9;
+        }
+        /* body ::before{
+            content: "";
+            position: absolute;
+            background:url('mamiimages/backimg.jpg') no-repeat center center/cover ;
+            height: 500px;
+            width: 500px;
+            z-index: -1;
+            opacity: .6;
+        
+        } */
+        .container{
+              display: grid;
+              grid-gap: 2px;
+              background-color:#f9f0f6;
+              /* grid-template-columns: 1fr 1fr 1fr 1fr ; */
+              grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+
+        }
+        .navbar{
+              display: block;
+              margin: auto;
+              text-align: center;
+              font-style: italic;
+              padding: 1rem 1rem;
+              border-radius: 4rem;
+              width: 11rem;
+              font-size: 2.5rem;
+              background-color:  rgb(222 239 224);
+
+
+        }
+        .item{
+            height: 20rem;
+            width: 17rem;
+            margin: 2rem .5rem;
+            
+        }
+        #dress1{
+            background: url(mamiimages/sas1.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20rem 20rem;
+
+        }
+        #dress2{
+            background: url(mamiimages/sas2.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20rem 20rem;
+
+        }
+        #dress3{
+            background: url(mamiimages/sas3.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20rem 20rem;
+
+        }
+        #dress4{
+            background: url(mamiimages/sas4.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20rem 20rem;
+
+        }
+        #dress5{
+            background: url(mamiimages/sas5.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20rem 20rem;
+
+        }
+        .item .price{
+            margin-top: 20.5rem;
+            color: black;
+            background-color: #fdf3e3;
+            display: inline-block;
+            font-size: 1.2rem;
+            border-radius: .5rem;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .item .price a{
+            text-decoration: none;
+            color: black;
+            font-family: cursive;
+        }
+            /* .bag1{
+
+        position: fixed;
+        right: 1rem;
+        top: 3rem;
+        color: #dc2746b5;
+        border-radius: 1.4rem;
+                
+            }
+            .bag1:hover{
+                color: rgb(221, 57, 134);
+            }
+            .material-icons{
+        font-size: 3rem; box-shadow: 0 5px 5px rgb(218, 86, 108);
+        border-radius: 2rem 2rem;
+    }
+    #bag{
+        position: fixed;
+        right: 1rem;
+        top: 2.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 2rem;
+        color: white;
+        cursor: pointer;
+        background-color:#dc218194;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .hoverme{
+        background-color: #d2b5db8c;
+        color: #6d0e0e;
+        position: fixed;
+        right: 1rem;
+        top: 5rem;
+        visibility: hidden;
+        border-radius: 1rem;
+        padding: .5rem .5rem;
+    }
+    .bag1:hover .hoverme
+        {
+        visibility: visible;
+        
+        }
+        button{
+            cursor: pointer;
+            background-color:#d0c3c754;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            margin: 0rem .5rem;
+            border-radius: .5rem .5rem;
+        } */
+        button{
+            cursor: pointer;
+            background-color:#d0c3c754;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            margin: 0rem .5rem;
+            border-radius: .5rem .5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        Sassafras
+       
+    </div>
+    <div id="bag">
+            
+    </div>
+   <a href="cart.html">
+    <div class="bag1">
+        <div class="hoverme">items in cart</div>
+        <i class="material-icons">
+            add_shopping_cart                
+        </i>
+    </div>
+   </a>
+    <div class="container">
+
+        <div class="item" id="dress1"><div class="price">
+            Rs:649 <button onclick="addToCart('sas1.jpeg')">add to cart</button><button onclick="removeFromCart('save1.jpeg')">remove</button><br>
+            <a href="mamiimages/sas1.jpeg">see the full image</a> 
+        </div>
+    </div>
+        <div class="item" id="dress2">
+            <div class="price">
+                Rs:762<button onclick="addToCart('sas2.jpeg')">add to cart</button><button onclick="removeFromCart('sas2.jpeg')">remove</button><br>
+                <a href="mamiimages/sas2.jpeg">see the full image</a> 
+            </div>
+        </div>
+        <div class="item" id="dress3">
+            <div class="price">
+                Rs:756<button onclick="addToCart('sas3.jpeg')">add to cart</button><button onclick="removeFromCart('sas3.jpeg')">remove</button><br>
+                <a href="mamiimages/sas3.jpeg">see the full image</a> 
+            </div>
+        </div>
+        <div class="item" id="dress4"><div class="price">
+            Rs:528<button onclick="addToCart('sas4.jpeg')">add to cart</button><button onclick="removeFromCart('sas4.jpeg')">remove</button><br>
+            <a href="mamiimages/sas4.jpeg">see the full image</a> 
+        </div></div>
+        <div class="item" id="dress5"><div class="price">
+            Rs:649<button onclick="addToCart('sas5.jpeg')">add to cart</button><button onclick="removeFromCart('sas5.jpeg')">remove</button><br>
+            <a href="mamiimages/sas5.jpeg">see the full image</a> 
+        </div></div>
+        <script src="cart.js"></script>
+</body>
+</html>

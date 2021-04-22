@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+*body{
+    margin: 0px 0px ;
+    padding: 0px 0px ;
+    
+}
+body{
+    background: url("/static/myntraf1.jpeg") center /cover no-repeat;
+    background: thistle;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 23rem;
+    width: auto;
+    color: white;
+    font-family: 'Merriweather', serif;
+    /* display: block; */
+    margin: auto;
+    margin-top: 8rem;
+    
+    padding: 1rem 1rem;
+   border-radius: 1.5rem;
+   background-color:#e91e6378;
+
+}
+.container img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 3rem;
+    
+}
+h1{
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0rem;
+
+}
+.details{
+    margin: .5rem 0rem;
+    padding: 1rem 1rem;
+    width: 60%;
+    border: none;
+    background-color:#f5e9e9c2;
+    outline: none;
+    color: black;
+}
+.btn{
+    margin: .5rem 0rem;
+    width: 25%;
+    align-items: center;
+    padding: .5rem 0rem;
+    background-color:#ecd4ecb5;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="mamiimages/logomami.jpeg" alt="">
+        
+        <h1>Admin login</h1>
+        
+            <input type="email" class="details" name="name" id="name" required placeholder="enter your name or email">
+            <input type="password" class="details" name="password" required placeholder="enter the password" id="password"><br>
+            <button class="btn" onclick="ding()"id="submit">login</button>
+        
+       <p id="container1"></p>
+        <script>
+             function ding(){
+                var name=document.getElementById("name").value;
+      var email=document.getElementById("password").value;
+      var message;
+      if(name=='fashionqueen@gmail.com' && email=='nash@130414mamu'){
+          message=`<a href="adminpage.html">`;
+          document.getElementById("container1").innerHTML=message;
+        
+      }
+      else {
+          message="email or password is incorrect"
+          document.getElementById("container1").innerHTML=message;
+      
+      }
+             }
+        </script>
+</body>
+</html>

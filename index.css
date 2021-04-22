@@ -52,7 +52,7 @@
 }
 li{
     color: rgb(27, 27, 27) !important;
-    font-size: 1.5rem !important;
+    font-size: 1.9rem !important;
     
 }
 a{
@@ -69,8 +69,8 @@ a{
     border-color: #867272;
 }
 .navbar img{
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
      
     border-radius: 15rem;
 
@@ -105,3 +105,13 @@ a{
 .navbar-inverse .navbar-nav>li>a {
     color: #0a0a0ab5 !important;
 }   
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 4rem !important;
+    margin-left: -10px !important;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 27px !important;
+    height: 3px !important;
+    border-radius: 1px;
+}

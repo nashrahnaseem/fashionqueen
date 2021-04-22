@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casual wearings</title>
-    <script src="admin.js"></script>
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body{
@@ -199,61 +200,70 @@
             color: black;
             font-family: cursive;
         }
-        .bag1{
+            /* .bag1{
 
-    position: fixed;
-    right: 1rem;
-    top: 3rem;
-    color: #dc2746b5;
-    border-radius: 1.4rem;
-            
-        }
-        .bag1:hover{
-            color: rgb(221, 57, 134);
-        }
-        .material-icons{
-       font-size: 3rem; box-shadow: 0 5px 5px rgb(218, 86, 108);
-       border-radius: 2rem 2rem;
-   }
-   #bag{
-    position: fixed;
-    right: 1rem;
-    top: 2.5rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 2rem;
-    color: white;
-    cursor: pointer;
-    background-color:#dc218194;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-   }
-   .hoverme{
-    background-color: #d2b5db8c;
-    color: #6d0e0e;
-    position: fixed;
-    right: 1rem;
-    top: 5rem;
-    visibility: hidden;
-    border-radius: 1rem;
-    padding: .5rem .5rem;
-   }
- .bag1:hover .hoverme
-    {
-       visibility: visible;
-       
+        position: fixed;
+        right: 1rem;
+        top: 3rem;
+        color: #dc2746b5;
+        border-radius: 1.4rem;
+                
+            }
+            .bag1:hover{
+                color: rgb(221, 57, 134);
+            }
+            .material-icons{
+        font-size: 3rem; box-shadow: 0 5px 5px rgb(218, 86, 108);
+        border-radius: 2rem 2rem;
     }
-    button{
+    #bag{
+        position: fixed;
+        right: 1rem;
+        top: 2.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 2rem;
+        color: white;
         cursor: pointer;
-        background-color:#d0c3c754;
-        outline: none;
-        border: none;
-        font-size: 1rem;
-        margin: 0rem .5rem;
-        border-radius: .5rem .5rem;
+        background-color:#dc218194;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
+    .hoverme{
+        background-color: #d2b5db8c;
+        color: #6d0e0e;
+        position: fixed;
+        right: 1rem;
+        top: 5rem;
+        visibility: hidden;
+        border-radius: 1rem;
+        padding: .5rem .5rem;
+    }
+    .bag1:hover .hoverme
+        {
+        visibility: visible;
+        
+        }
+        button{
+            cursor: pointer;
+            background-color:#d0c3c754;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            margin: 0rem .5rem;
+            border-radius: .5rem .5rem;
+        } */
+        button{
+            cursor: pointer;
+            background-color:#d0c3c754;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            margin: 0rem .5rem;
+            border-radius: .5rem .5rem;
+        }
 
     </style>
 </head>
@@ -362,36 +372,9 @@
         </div></div>
     
     </div>
+    <script src="cart.js"></script>
     <script>
-        var count=0;
-       var bag= document.getElementById("bag");
-        function addToCart(productId){
-cartProducts=[]
-  alreadyExisting = localStorage.getItem("mycart");
-  if(alreadyExisting){//if anything in cart
-    cartProducts = JSON.parse(alreadyExisting)   
-  }
-  
-  cartProducts.push(productId)
-  bag.innerHTML=++count;
-  localStorage.setItem("mycart",JSON.stringify(cartProducts) );
-  bag.innerHTML=JSON.parse(localStorage.getItem("mycart")).length
-// displayProducts()// update the screen
-}
 
-function removeFromCart(productId){
-  cartProducts=[]
-  alreadyExisting = localStorage.getItem("mycart");
-  if(alreadyExisting){//if anything in cart
-    cartProducts = JSON.parse(alreadyExisting)   
-  }
-cartProducts = cartProducts.filter(p=> p !== productId)
-localStorage.setItem("mycart",JSON.stringify(cartProducts) );
- bag.innerHTML=cartProducts.length 
-
-// displayProducts()// update the screen
-}
-bag.innerHTML=JSON.parse(localStorage.getItem("mycart")).length
     </script>
 </body>
 </html> 

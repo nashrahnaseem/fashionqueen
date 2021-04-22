@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<div id="product" class="row padding15">
+ 
+</div>
+<script>  
+products=[{productId:3,name:"TP-link N300 WiFi Wireless Router TL-WR845N | 300Mbps Wi-Fi Speed | Three 5dBi high gain Antennas | IPv6 Compatibl", image:"https://m.media-amazon.com/images/I/41fQ5NSkEWL._AC_UL320_.jpg"},{productId:2,name:"TP-Link TL-WR820N 300 Mbps Speed Wireless WiFi Router, Easy Setup, IPv6 Compatible, Supports Parent Control",image:"https://m.media-amazon.com/images/I/41TTdx29oBL._AC_UL320_.jpg"},{productId:5, name:"TP-Link TL-WR841N 300Mbps Wireless N Cable, 4 Fast LAN Ports, Easy Setup, WPS Button, Supports Parent Control", image:"https://m.media-amazon.com/images/I/51QMHdyFiOL._AC_UL320_.jpg"},{productId:9, name:"TP-Link WiFi 6 AX1500 Archer AX10,Smart WiFi,Triple-Core CPU, Gigabit, Dual Band, OFDMA, MU-MIMO", image: "https://m.media-amazon.com/images/I/51QmN8uNkgL._AC_UL320_.jpg"}]
+
+
+function displayProducts(){
+cartProducts=[]
+  alreadyExisting = localStorage.getItem("mycart");
+
+  if(alreadyExisting){//if anything in cart
+    cartProducts = JSON.parse(alreadyExisting)  
+  }
+document.getElementById("product").innerHTML="" // clear the product list
+products.map(p=>{ 
+  document.getElementById("product").innerHTML+=`
+  <div class="card col-3" style="width:400px">
+    <img class="card-img-top" src="${p.image}" style="">
+    <div class="card-body">
+      <p class="card-text">${p.name}</p>
+${cartProducts.includes(p.productId)?"<button onClick='removeFromCart("+p.productId+")' class='btn btn-primary'>remove From cart</button>":"<button onClick='addToCart("+p.productId+")' class='btn btn-primary'>add to cart</button>"}
+      
+    </div>
+  </div>
+
+`
+})
+ 
+}
+
+function removeFromCart(productId){
+  cartProducts=[]
+  alreadyExisting = localStorage.getItem("mycart");
+  if(alreadyExisting){//if anything in cart
+    cartProducts = JSON.parse(alreadyExisting)   
+  }
+cartProducts = cartProducts.filter(p=> p !== productId)
+localStorage.setItem("mycart",JSON.stringify(cartProducts) );
+displayProducts()// update the screen
+}
+function addToCart(productId){
+cartProducts=[]
+  alreadyExisting = localStorage.getItem("mycart");
+  if(alreadyExisting){//if anything in cart
+    cartProducts = JSON.parse(alreadyExisting)   
+  }
+  
+  cartProducts.push(productId)
+
+  localStorage.setItem("mycart",JSON.stringify(cartProducts) );
+displayProducts()// update the screen
+}
+
+
+displayProducts()//display the products 
+</script>
+<style>
+.padding15{padding:15 60 15 60px} 
+.margin10{margin:10px}
+</style>
